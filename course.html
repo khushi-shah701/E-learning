@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LearnHub</h1>
+    <nav>
+      <a href="index.html">Courses</a>
+      <a href="progress.html">My Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="course-title">Course Title</h2>
+    <p id="course-desc">Course description...</p>
+
+    <h3>Watch Lesson</h3>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dD2EISBDjWM"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <button onclick="markComplete()">Mark as Completed</button>
+  </main>
+
+  <script>
+    // Simple localStorage progress simulation
+    function markComplete() {
+      localStorage.setItem('courseCompleted', 'true');
+      alert('Progress Saved!');
+    }
+  </script>
+</body>
+</html>
